@@ -205,4 +205,10 @@ h2 {
     padding-bottom: 5px;
     display: inline-block;
   }
+/* Asegura que la tarjeta de la foto no desborde la pantalla */
+  .hero-visual, .profile-card {
+    max-width: 100%;
+    width: 100%;
+    overflow: hidden;
+  }
 }

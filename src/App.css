@@ -17,15 +17,15 @@
   box-sizing: border-box;
 }
 
-body {
+html, body {
   font-family: 'Manrope', sans-serif;
   background-color: var(--bg-color);
   color: var(--text-main);
   line-height: 1.6;
-  overflow-x: hidden;
-}
-
-html {
+  /* Estas 3 líneas son la magia que evita el hueco a la derecha: */
+  overflow-x: hidden !important;
+  width: 100%;
+  position: relative;
   scroll-behavior: smooth;
 }
 

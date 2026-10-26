@@ -1,0 +1,90 @@
+/* src/components/Navbar.css */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  /* Hacemos el fondo un poco más transparente para que el cristal se note más */
+  background: rgba(0, 0, 0, 0.6); 
+  backdrop-filter: blur(12px); /* Aumentamos el desenfoque */
+  -webkit-backdrop-filter: blur(12px); /* Vital para que el cristal funcione en iPhone/Safari */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05); /* Borde más sutil y premium */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 5%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--text-main);
+  text-decoration: none;
+}
+
+.logo span {
+  /* Le damos el mismo efecto de degradado rojo que a los títulos */
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  background-clip: text; 
+  -webkit-text-fill-color: transparent;
+  color: transparent; 
+}
+
+.menu {
+  display: flex;
+  gap: 30px;
+}
+
+.menu a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.menu a:hover {
+  color: var(--text-main);
+}
+
+.nav-button {
+  padding: 8px 20px;
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  color: var(--text-main);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+/* Efecto hover premium estilo GOW para tu botón de Hablemos */
+.nav-button:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  box-shadow: 0 0 15px rgba(229, 9, 20, 0.3); /* Resplandor rojo */
+  transform: translateY(-2px); /* Se levanta un poquito al pasar el mouse */
+}
+
+/* =========================================
+   DISEÑO RESPONSIVE PARA EL MENÚ
+   ========================================= */
+@media (max-width: 850px) {
+  .navbar {
+    flex-direction: column;
+    padding: 15px 10px;
+    gap: 12px;
+  }
+  
+  .menu {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 5px;
+  }
+}

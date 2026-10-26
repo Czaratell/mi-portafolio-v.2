@@ -1,0 +1,41 @@
+.about-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 60px;
+  margin-top: 30px;
+}
+
+.large-text {
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-bottom: 20px;
+  color: var(--text-main);
+}
+
+.about-main p {
+  color: var(--text-muted);
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+.about-side {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-left: 1px solid var(--border-color);
+  padding-left: 30px;
+}
+
+.stat strong {
+  display: block;
+  font-size: 2rem;
+  color: var(--text-main);
+  line-height: 1;
+}
+
+.stat span {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}

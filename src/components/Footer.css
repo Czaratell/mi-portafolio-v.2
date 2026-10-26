@@ -1,0 +1,66 @@
+/* src/components/Footer.css */
+footer {
+  padding: 60px 20px 30px;
+  text-align: center;
+  border-top: 1px solid var(--border-color);
+  margin-top: 50px;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.footer-logo {
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: var(--text-main);
+}
+
+.footer-logo span {
+  color: var(--accent);
+}
+
+.footer-info {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* Estilos para la frase de Platón / GOW */
+.footer-quote {
+  margin: 20px 0;
+  padding: 15px 25px;
+  border-left: 3px solid var(--accent);
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 0 8px 8px 0;
+}
+
+.footer-quote p {
+  font-size: 1rem;
+  font-style: italic;
+  line-height: 1.5;
+  color: var(--text-main);
+  margin-bottom: 8px;
+}
+
+.quote-author {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.footer-copy {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 20px;
+  opacity: 0.5;
+}

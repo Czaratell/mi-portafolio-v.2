@@ -1,0 +1,39 @@
+.timeline {
+  margin-top: 40px;
+  border-left: 2px solid var(--border-color);
+  padding-left: 30px;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+/* El punto en la línea de tiempo */
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -37px;
+  top: 0;
+  width: 12px;
+  height: 12px;
+  background-color: var(--accent);
+  border-radius: 50%;
+}
+
+.timeline-date {
+  font-size: 0.8rem;
+  color: var(--accent);
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.timeline-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.timeline-content p {
+  color: var(--text-muted);
+}

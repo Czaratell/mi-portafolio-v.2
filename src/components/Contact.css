@@ -1,0 +1,36 @@
+.contact-section {
+  text-align: center;
+  padding-bottom: 150px;
+}
+
+.contact-number {
+  font-size: 4rem;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.03);
+  margin-bottom: 20px;
+}
+
+.contact-text {
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  max-width: 500px;
+  margin: 0 auto 50px auto;
+}
+
+.contact-button {
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--text-main);
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.3s;
+}
+
+.contact-button span {
+  color: var(--accent);
+}
+
+.contact-button:hover {
+  border-color: var(--text-main);
+}

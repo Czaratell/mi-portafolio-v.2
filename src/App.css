@@ -1,0 +1,208 @@
+/* src/App.css */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;800&display=swap');
+
+:root {
+  --bg-color: #000000; /* Negro puro */
+  --text-main: #ededed;
+  --text-muted: #888888;
+  --accent: #e50914; /* Rojo God of War */
+  --accent-gradient: linear-gradient(135deg, #e50914 0%, #ff4b1f 100%); /* Degradado épico para los textos resaltados */
+  --border-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Reseteo vital para que no se desordene la página (Corregido de - a *) */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Tipografía de títulos */
+h1, h2, h3, .logo, .section-number, .eyebrow {
+  font-family: 'Manrope', sans-serif;
+}
+
+/* LA MAGIA: Efecto de texto con gradiente Rojo */
+h1 span, h2 span, .logo span {
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  background-clip: text; 
+  -webkit-text-fill-color: transparent;
+  color: transparent; 
+  display: inline-block;
+}
+
+/* Clases reutilizables para todas las secciones */
+.section {
+  padding: 100px 5%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-number {
+  font-size: 4rem;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.03);
+  margin-bottom: -40px;
+}
+
+.eyebrow {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: var(--accent);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 40px;
+  line-height: 1.1;
+}
+
+/* La línea de tecnologías debajo del Hero */
+.intro-line {
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  padding: 20px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.tech-list {
+  display: flex;
+  gap: 30px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* =========================================
+   DISEÑO RESPONSIVE (MÓVILES Y TABLETS)
+   ========================================= */
+@media (max-width: 850px) {
+  /* Ajustes globales de espaciado y tipografía */
+  .section {
+    padding: 60px 5%;
+  }
+  
+  h2 {
+    font-size: 2.2rem;
+    margin-bottom: 25px;
+  }
+  
+  .section-number {
+    font-size: 2.5rem;
+    margin-bottom: -20px;
+  }
+
+  /* Navbar corregido para que no ocupe tanto espacio */
+  nav {
+    flex-direction: column;
+    padding: 15px 10px;
+    gap: 10px;
+  }
+  
+  .nav-links {
+    gap: 12px;
+    font-size: 0.75rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* Sección Hero (Inicio) corregida para empujar el texto hacia abajo */
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 190px; 
+    gap: 40px;
+  }
+  
+  .hero-content h1 {
+    font-size: 2.2rem;
+    line-height: 1.1;
+    margin-top: 20px;
+  }
+  
+  .hero-buttons {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  /* Línea de tecnologías */
+  .intro-line {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+  
+  .tech-list {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  /* Sección Sobre Mí */
+  .about-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  .about-side {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-left: none;
+    border-top: 1px solid var(--border-color);
+    padding-top: 25px;
+    padding-left: 0;
+    gap: 15px;
+  }
+
+  /* Sección de Aprendizaje */
+  .learning-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 20px 0;
+  }
+  
+  .learning-item .arrow {
+    align-self: flex-end;
+  }
+
+  /* Sección de Formación (Línea de tiempo) */
+  .timeline-item {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .timeline-date {
+    min-width: auto;
+    border-right: none;
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 5px;
+    display: inline-block;
+  }
+}
